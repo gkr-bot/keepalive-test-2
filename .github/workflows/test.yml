@@ -1,0 +1,15 @@
+name: Keepalive Test
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch: # Run workflow manually (without waiting for the cron to be called), through the GitHub Actions Workflow page directly
+permissions:
+  actions: write
+jobs:
+  update-readme-with-blog:
+    name: Update this repo's README with all the articles
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test Keepalive
+        uses: gautamkrishnar/keepalive-workflow@v1
