@@ -13,3 +13,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test Keepalive
         uses: gautamkrishnar/keepalive-workflow@v1
+        with:
+          time_elapsed: 0
